@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("p").append("<p>&lt;p&gt; &lt;/p&gt;</p>");
+  });
+  $("#btn2").click(function(){
+    $("ol").append("<li>Appended item</li>");
+  });
+});
+
+$( 'input[type=button]' ).on('click', function(){
+            var cursorPos = $('#text').prop('selectionStart');
+            var v = $('#text').val();
+            var textBefore = v.substring(0,  cursorPos );
+            var textAfter  = v.substring( cursorPos, v.length );
+            $('#text').val( textBefore+ $(this).val() +textAfter );
+        });
+</script>
+</head>
+<body>
+
+<form>
+    <textarea id="text" cols="40" rows="3"></textarea>
+    <input type="button" value="<p> </p>" />
+</form>
+
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+
+<button id="btn1">P Element</button>
+<button id="btn2">Append list item</button>
+
+<blockquote contenteditable="true">
+    <p>Edit this content to add your own quote</p>
+</blockquote>
+
+<cite contenteditable="true">-- Write your own name here</cite>
+
+
+
+ <table>
+            <tr>
+                <td>
+                    <div class="tag">HTML (Body)</div>
+                    <div id="html" class="content" contenteditable></div>
+                    <p> hello</p>
+                </td>
+                <td>
+                    <div class="tag">CSS</div>
+                    <div id="css" class="content" contenteditable></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="tag">JavaScript</div>
+                    <div id="js" class="content" contenteditable></div>
+                </td>
+                <td>
+                    <div class="tag">Output</div>
+                    <iframe id="output"></iframe>
+                </td>
+            </tr>
+        </table>
+
+
+
+
+        <!-- Create a simple CodeMirror instance -->
+<link rel="stylesheet" href="lib/codemirror.css">
+<script src="lib/codemirror.js"></script>
+<script>
+  var editor = CodeMirror.fromTextArea(myTextarea, {
+    lineNumbers: true
+  });
+</script>
+    </body>
+</html>
+<script>
+window.onload=function(){
+    var html=document.getElementById("html"),
+        css=document.getElementById("css"),
+        js=document.getElementById("js"),
+        output=document.getElementById("output"),
+        working=false,
+        fill=function(){
+            if(working){
+                return false;
+            }
+            working=true;
+            var document=output.contentDocument,
+                style=document.createElement("style"),
+                script=document.createElement("script");
+            document.body.innerHTML=html.textContent;
+            style.innerHTML=css.textContent.replace(/\s/g,"");
+            script.innerHTML=js.textContent;
+            document.body.appendChild(style);
+            document.body.appendChild(script);
+            working=false;
+        };
+    html.onkeyup=fill;
+    css.onkeyup=fill;
+    js.onkeyup=fill;
+}
+</script>
+<style>
+html,body,table,div.content,iframe{
+    border:0;
+    height:100%;
+    margin:0;
+    padding:0;
+    width:100%;
+}
+td{
+    border:2px solid black;
+    height:50%;
+    padding:25px 5px 5px 5px;
+    position:relative;
+    vertical-align:top;
+    width:50%;
+}
+div.tag{
+    position:absolute;
+    right:5px;
+    top:5px;
+}
+</style>
+</body>
+</html>

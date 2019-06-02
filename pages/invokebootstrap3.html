@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+
+<head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"> 
+
+<script>
+$(document).ready(function(){
+    $("input[name='country']").change(function(){
+        var checkedCountries = $("input[name='country']:checked");
+        var countries = [];
+        for(var i = 0; i<checkedCountries.length; i++) {
+            countries.push(checkedCountries[i].value + ".");
+        }
+        $("#countryList").val(countries.join(" "));
+
+    });
+
+    $("#copyBtn").click(function() {
+        var copyText = document.getElementById("countryList");
+        copyText.select();
+        document.execCommand("Copy");
+        alert("Copied the text: " + copyText.value);
+    });
+});
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+
+
+
+
+<input type="checkbox" name="country" value="America">America<br>
+<input type="checkbox" name="country" value="Burma">Burma<br>
+<input type="checkbox" name="country" value="China">China<br>
+<input type="checkbox" name="country" value="Denmark">Denmark<br>
+<input type="checkbox" name="country" value="England">England<br>
+<input type="checkbox" name="country" value="France">France<br>
+<textarea id="countryList"></textarea></br>
+
+<input type="button" id="copyBtn" value="Copy Country List"/>
+
+
+
+</div>  <!-- Containter Div -->
+
+  <script type="text/javascript" src="../js/checkbox.js"></script>
+</body>
+
+</html>

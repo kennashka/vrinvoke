@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+
+<head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"> 
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="row justify-content-center">
+    <h3 class="text-center"> VR Invoke Text Editor</h3>
+  </div>
+
+
+
+  <div class="row justify-content-center">
+
+  <form class="pt-3">
+    <div class="row pb-1">
+    <div class="col-2 bg-light text-center">
+       <a href="https://www.w3schools.com" target="_blank"> <p class="text-dark">Preview</p></a>
+</div>
+    <div class="col-1 bg-info text-center">
+       <a href="#"> <p class="text-dark">Clear</p></a>
+</div>
+    <div class="col-3 bg-warning text-center">
+       <a href="pages/invokemetadata.html"> <p class="text-dark">Meta Data Help</p></a>
+</div>
+    <div class="col-2 bg-success text-center">
+       <a href="#"> <p class="text-dark">Copy</p></a>
+</div>
+    <div class="col-4 bg-light text-center">
+       <a href="#"> <p class="text-dark">Continue to Navbar Design</p></a>
+</div>
+</div>
+
+    <textarea id="text" cols="100" rows="3">
+      
+    </textarea>
+</form>
+
+</div>
+</div> <!-- Container Div -->
+
+<div class="container">
+  <div class="row"> 
+    <div class="col">
+      <p>  Beginning Common Tags  </p>
+
+      <input type="button" value="<!DOCTYPE html>" />
+      <input type="button" value="<html> </html>" />
+      <input type="button" id="el" value='<meta charset="utf-8">' />
+      </div>
+  </div> <!--Row -->
+
+
+
+    <div class="row"> 
+    <div class="col">
+      <p class="pt-3">
+        Head Tags (need seperate page for this)
+      </p>
+      <input type="button" value="<head> </head>" />
+      <input type="button" value="<title> </title >" />
+      <input type="button" value="<meta> </meta>" />
+
+
+      </div>
+  </div> <!--Row -->
+  
+    <div class="row"> 
+    <div class="col">
+      <p class="pt-3">
+        List of Metadata tags with name and content options
+      </p>
+      <input type="button" value=' <meta name="viewport" content="width=device-width, initial-scale=1">' />
+
+      </div>
+  </div> <!--Row -->
+  
+    <div class="row"> 
+    <div class="col">
+      <form>
+  <div class="form-group pt-3">
+    <label for="exampleFormControlSelect1"> Head Tags Libraries</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Bootstrap CSS CDN</option>
+      <option>Bootstrap JS CDN</option>
+      <option>JQuery JS CDN</option>
+      <option>Font Awesome CSS CDN</option>
+      <option>Popper JS CDN</option>
+      <option>5</option>
+    </select>
+  </div>
+</form>
+
+      </div>
+  </div> <!--Row -->
+
+    <div class="row"> 
+    <div class="col">
+      <p class="pt-3">
+        Custom CSS 
+      </p>
+      <input type="button" value=' <link rel="stylesheet" type="text/css" href="css/style.css">'/>
+        <p class="pt-3">
+        Custom JS
+      </p>
+      <input type="button" value='<script src="js/custom.js"></script>' />
+
+    <div class="row"> 
+    <div class="col">
+      <p class="pt-3">
+        Custom Navbar (list of 10 sample navbar)
+      </p>
+      <input type="button" value="<head> </head>" />
+      <input type="button" value="<!DOCTYPE html>" />
+      <input type="button" value="<html> </html>" />
+
+
+      </div>
+  </div> <!--Row -->
+
+</div>
+</div>
+
+<div class="row"> 
+    <div class="col">
+
+      <p class="pt-3">
+        Sidebars right and left (10 samples)
+      </p>
+
+      <input type="button" value="<body> </body>" />
+      <input type="button" value="<nav> </nav>" />
+      <div class="row">
+      <div class="col pt-1">
+      <input type="button" value='<abbr> </abbr>' />
+      <input type="button" value='<address> </address>' />
+      <input type="button" value='<b> </b>' />
+      <input type="button" value='<bdi> </bdi>' />
+
+
+    </div>
+    </div>
+
+      </div>
+  </div> <!--Row -->
+
+
+    <div class="row"> 
+    <div class="col">
+
+      <p class="pt-3">
+        Common Body Tags
+      </p>
+
+      <input type="button" value="<body> </body>" />
+      <input type="button" value="<nav> </nav>" />
+      <div class="row">
+      <div class="col pt-1">
+      <input type="button" value='<div class="container"> </div>' />
+      <input type="button" value='<div class="row"> </div>' />
+      <input type="button" value='<div class="col"> </div>' />
+      <input type="button" value='<h1> </h1>' />
+      <input type="button" value='<h2> </h2>' />
+      <input type="button" value='<h3> </h3>' />
+      <input type="button" value='<h4> </h4>' />
+      <input type="button" value='<h5> </h5>' />
+      <input type="button" value='<h6> </h6>' />
+      <input type="button" value='<p> </p>' />
+      <input type="button" value='<br>' />
+      <input type="button" value='<hr>' />
+      <input type="button" value='<!-- comments-->' />
+      <input type="button" value='<h5> </h5>' />
+      <input type="button" value='<h6> </h6>' />
+    </div>
+    </div>
+
+      </div>
+  </div> <!--Row -->
+
+    <div class="row"> 
+    <div class="col">
+
+      <p class="pt-3">
+        Formatting Tags
+      </p>
+
+      <input type="button" value="<body> </body>" />
+      <input type="button" value="<nav> </nav>" />
+      <div class="row">
+      <div class="col pt-1">
+      <input type="button" value='<abbr> </abbr>' />
+      <input type="button" value='<address> </address>' />
+      <input type="button" value='<b> </b>' />
+      <input type="button" value='<bdi> </bdi>' />
+      <input type="button" value='<bdo> </bdo>' />
+      <input type="button" value='<blockquote> </blockquote>' />
+      <input type="button" value='<cite> </cite>' />
+      <input type="button" value='<code> </code>' />
+      <input type="button" value='<del> </del>' />
+      <input type="button" value='<dfn> </dfn>' />
+      <input type="button" value='<em> </em>' />
+      <input type="button" value='<i> </i>'/>
+      <input type="button" value='<ins>  </ins>' />
+      <input type="button" value='<kbd> </kbd>' />
+      <input type="button" value='<mark> </mark>' />
+      <input type="button" value='<meter> </meter>' />
+      <input type="button" value='<pre> </pre>' />
+      <input type="button" value='<progress> </progress>' />
+      <input type="button" value='<q> </q>' />
+      <input type="button" value='<rp> </rp>' />
+      <input type="button" value='<rt> </rt>' />
+      <input type="button" value='<ruby> </ruby>' />
+      <input type="button" value='<s> </s>' />
+      <input type="button" value='<samp> </samp>' />
+      <input type="button" value='<small> </small>' />
+      <input type="button" value='<strong> </strong>' />
+      <input type="button" value='<sub> </sub>' />
+      <input type="button" value='<sup> </sup>' />
+      <input type="button" value='<template> </template>' />
+      <input type="button" value='<time> </time>' />
+      <input type="button" value='<u> </u>' />
+      <input type="button" value='<var> </var>' />
+      <input type="button" value='<wbr>' />
+    </div>
+    </div>
+
+      </div>
+  </div> <!--Row -->
+
+<div class="row"> 
+    <div class="col">
+
+      <p class="pt-3">
+Forms and Input
+      </p>
+
+      <input type="button" value="<form> </form>" />
+      <input type="button" value="<input> </input>" />
+      <input type="button" value="<textarea> </textarea>" />
+      <input type="button" value="<button> </button>" />
+      <input type="button" value="<select> </select>" />
+      <input type="button" value="<optgroup> </optgroup>" />
+      <input type="button" value="<option> </option>" />
+      <input type="button" value="<label> </label>" />
+
+      <div class="row">
+      <div class="col pt-1">
+
+      <input type="button" value='<fieldset> </fieldset>' />
+      <input type="button" value='<legend> </legend>' />
+      <input type="button" value='<datalist> </datalist>' />
+      <input type="button" value='<output> </output>' />
+
+
+
+    </div>
+    </div>
+
+      </div>
+  </div> <!--Row -->
+
+
+<div class="row"> 
+    <div class="col">
+
+      <p class="pt-3">
+Frames
+      </p>
+
+      <input type="button" value="<iframe> </iframe>" />
+      <input type="button" value="<nav> </nav>" />
+      
+
+
+      </div>
+  </div> <!--Row -->
+
+
+<div class="row"> 
+    <div class="col">
+
+      <p class="pt-3">
+Images
+      </p>
+
+      <input type="button" value="<img>" />
+      <input type="button" value="<map> </map>" />
+      <input type="button" value="<area>" />
+      <input type="button" value="<canvas> </canvas>" />
+      <input type="button" value="<figure> </figure>" />
+
+
+      <div class="row">
+      <div class="col pt-1">
+
+      <input type="button" value='<picture> </picture>' />
+      <input type="button" value="<svg> </svg>" />
+      <input type="button" value="<nav> </nav>" />
+
+
+    </div>
+    </div>
+
+      </div>
+  </div> <!--Row -->
+
+
+
+<div class="row"> 
+    <div class="col">
+
+      <p class="pt-3">
+Audio / Video
+
+      </p>
+
+      <input type="button" value="<audio> </audio>" />
+      <input type="button" value="<source> </source>" />
+      <input type="button" value="<track> </track>" />    
+
+
+      <div class="row">
+      <div class="col pt-1">
+
+      <input type="button" value='<video> </video>' />
+
+    </div>
+    </div>
+
+      </div>
+  </div> <!--Row -->
+
+  <div class="row"> 
+    <div class="col">
+
+      <p class="pt-3">
+Links
+
+      </p>
+
+      <input type="button" value="<a> </a>" />
+      <input type="button" value="<link> </link>" />
+      
+      <div class="row">
+      <div class="col pt-1">
+
+      <input type="button" value='<nav> </nav>' />
+
+
+    </div>
+    </div>
+
+      </div>
+  </div> <!--Row -->
+
+  <div class="row"> 
+    <div class="col">
+
+      <p class="pt-3">
+Lists
+
+      </p>
+
+      <input type="button" value="<ul> </ul>" />
+      <input type="button" value="<ol> </ol>" />
+      <input type="button" value="<li> </li>" />
+      <input type="button" value="<dl> </dl>" />
+
+      <div class="row">
+      <div class="col pt-1">
+
+      <input type="button" value='<dt> </dt>' />
+      <input type="button" value="<dd> </dd>" />
+
+    </div>
+    </div>
+
+      </div>
+  </div> <!--Row -->
+
+  <div class="row"> 
+    <div class="col">
+
+      <p class="pt-3">
+Tables
+
+      </p>
+
+      <input type="button" value="<table> </table>" />
+      <input type="button" value="<caption> </caption>" />
+      <input type="button" value="<th> </th>" />
+      <input type="button" value="<tr> </tr>" />  
+      <input type="button" value="<td> </td>" />
+      <input type="button" value="<thead> </thead>" />
+
+      <div class="row">
+      <div class="col pt-1">
+
+      <input type="button" value='<tfoot> </tfoot>' />
+      <input type="button" value="<col> </col>" />
+      <input type="button" value="<colgroup> </colgroup>" />
+
+    </div>
+    </div>
+
+      </div>
+  </div> <!--Row -->
+
+  <div class="row"> 
+    <div class="col">
+
+      <p class="pt-3">
+Styles and Semantics
+
+      </p>
+
+      <input type="button" value="<header> </header>" />
+      <input type="button" value="<main> </main>" />
+      <input type="button" value="<section> </section>" />
+      <input type="button" value="<article> </article>" />
+      <input type="button" value="<aside> </aside>" />
+      <input type="button" value="<details> </details>" />
+      <input type="button" value="<dialog> </dialog>" />
+      
+      <div class="row">
+      <div class="col pt-1">
+
+      <input type="button" value='<summary> </summary>' />
+      <input type="button" value="<style> </style>" />
+      <input type="button" value="<div> </div>" />
+      <input type="button" value="<span> </span>" />
+
+
+    </div>
+    </div>
+
+      </div>
+  </div> <!--Row -->
+
+  <div class="row"> 
+    <div class="col">
+
+      <p class="pt-3">
+Meta Info
+
+
+      </p>
+
+      <input type="button" value="<base> </base>" />
+      <input type="button" value="<meta>" />
+      
+      <div class="row">
+      <div class="col pt-1">
+
+      <input type="button" value='<head> </head>' />
+
+
+    </div>
+    </div>
+
+      </div>
+  </div> <!--Row -->
+
+  <div class="row"> 
+    <div class="col">
+
+      <p class="pt-3">
+Programming
+
+      </p>
+
+      <input type="button" value="<script> </script>" />
+      <input type="button" value="<noscript> </noscript>" />
+      
+      <div class="row">
+      <div class="col pt-1">
+      <input type="button" value="<embed>" />
+      <input type="button" value="<object> </object>" />
+      <input type="button" value='<param>  > </param>' />
+
+
+    </div>
+    </div>
+
+      </div>
+  </div> <!--Row -->
+
+</div>  <!-- Containter Div -->
+
+  <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/insertat.js"></script>
+</body>
+</html>

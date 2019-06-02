@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+
+<head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/style3.css"> 
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="row justify-content-center">
+    <h3 class="text-center"> VR Invoke Text Editor Prototype 3</h3>
+  </div>
+<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement -->
+
+<form name="myForm">
+	   <p>  <b>Beginning Common Tags </b> </p>
+<p>[&nbsp;<span class="intLink" onclick="insertMetachars('&lt;!DOCTYPE html&gt;\n','\n');">DOCTYPE html</span> |
+          <span class="intLink" onclick="insertMetachars('&lt;html&gt;\n','\n&lt;\/html&gt;');">html</span>
+      &nbsp;]</p>
+	   <p>  <b>Head Tags (need seperate page for this)  </b></p>
+<p>[&nbsp;<span class="intLink" onclick="insertMetachars('&lt;head&gt;\n','\n&lt;\/head&gt;\n');">head</span> |
+	<span class="intLink" onclick="insertMetachars('&lt;meta charset=\'utf-8\'&gt;\n','\n');">meta charset="utf-8"</span>  |
+          <span class="intLink" onclick="insertMetachars('&lt;title&gt;\n','\n&lt;\/title&gt;');">title</span> | 
+          <span class="intLink" onclick="var newURL=prompt('Enter the full URL for the link');if(newURL){insertMetachars('&lt;a href=\u0022'+newURL+'\u0022&gt;','&lt;\/a&gt;');}else{document.myForm.myTxtArea.focus();}">URL</span> | 
+          <span class="intLink" onclick="insertMetachars('\n&lt;code&gt;\n','\n&lt;\/code&gt;\n');">code</span> | <span class="intLink" onclick="insertMetachars(' :-)');">smile</span> &nbsp;]</p>
+
+ 	   <p> <b> Head Tags (need seperate page for this) </b> </p>
+<p>[&nbsp;<span class="intLink" onclick="insertMetachars('&lt;head&gt;\n','\n&lt;\/head&gt;\n');">head</span> |
+          <span class="intLink" onclick="insertMetachars('&lt;html&gt;\n','\n&lt;\/html&gt;');">html</span> | 
+          <span class="intLink" onclick="var newURL=prompt('Enter the full URL for the link');if(newURL){insertMetachars('&lt;a href=\u0022'+newURL+'\u0022&gt;','&lt;\/a&gt;');}else{document.myForm.myTxtArea.focus();}">URL</span> | 
+          <span class="intLink" onclick="insertMetachars('\n&lt;code&gt;\n','\n&lt;\/code&gt;\n');">code</span> | <span class="intLink" onclick="insertMetachars(' :-)');">smile</span> &nbsp;]</p>
+<p><textarea name="myTxtArea" id="myTxtArea"rows="10" cols="70">  </textarea></p>
+
+</form>
+
+
+<a onclick="combine('hello')" href="#" id="link">Next Step: Let's create some metadata</a>
+
+
+ 
+</div>  <!-- Containter Div -->
+
+  <script type="text/javascript" src="../js/code.js"></script>
+</body>
+</html>

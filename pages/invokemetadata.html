@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+
+<head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"> 
+</head>
+
+<body>
+
+</div>
+</div> <!-- Container Div -->
+
+<div class="container">
+
+    <div class="row justify-content-center">
+    <h3 class="text-center p-5"> VR Invoke Metadata Generator</h3>
+  </div>
+
+<section>
+  <div class="row"> 
+<form action="" onsubmit="return mt_wizard_validate(this)" name="mt_wizard">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title</label>
+    <input type="text" class="form-control" id=""  placeholder="(the title tag)"  value="" size="60" maxlength="200" name="titletext">
+    <small id="emailHelp" class="form-text text-muted">The title of your web-page. Think of a captivating title for your website. This is the first line that will be displayed in a search result. Don't make the title longer than 100 characters.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Description</label>
+    <input type="text" class="form-control" id="" placeholder="(the meta description tag)" value="" size="60" maxlength="200" name="description">
+    <small id="emailHelp" class="form-text text-muted">A short description in 200 characters of your web-page. This appears 1-on-1 in the search results. Add a different description for every page of your website.</small>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Keywords</label>
+    <input type="text" class="form-control" id=""  placeholder="(the title tag)" rows="4" cols="60" name="keywords">
+    <small id="emailHelp" class="form-text text-muted">Describe your page in 20 different keywords. These keywords will be used to categorize your page. Separate with a comma-space (use no more than 1000 characters).</small>
+  </div>
+
+  <button type="button" class="btn btn-primary" onclick="MaakTags(this.form);">Submit</button>
+
+   <div class="form-group p-5">
+    <label for="inputlg">Results</label>
+  <!--  <input class="form-control input-lg" id="inputlg" type="text" class="textInput" rows="5" cols="60" name="metatags"> -->
+      <textarea style="width: 100%;" class="form-control" rows="5" cols="60" name="metatags"></textarea>
+<h4>ROBOT-tag (<a href="http://www.metatags.org/meta_name_robots">optional</a>)</h4>
+    <p>The Robots Tag tells to the search engine spider which pages you want him to index. Use the index-follow tag so that the search engine spider will go through every page of your website.<br />
+    <br />
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody>
+            <tr>
+                <td width="25"><input type="checkbox" value="ja" checked="checked" name="roboton" /></td>
+                <td width="75">Activate</td>
+                <td><select class="textInput" name="rotext" size="1">
+                <option selected="selected" value="index, follow">index, follow</option>
+                <option value="noindex, follow">noindex, follow</option>
+                <option value="index, nofollow">index, nofollow</option>
+                <option value="noindex, nofollow">noindex, nofollow</option>
+                </select></td>
+                <td width="5">&nbsp;</td>
+                <td width="75"><input type="button" style="width: 100%;" onclick="explain_section('robot');" value="Help" /></td>
+            </tr>
+        </tbody>
+    </table>
+    </p>
+    <h4>REVISIT-tag&nbsp; (<a href="http://www.metatags.org/meta_name_revisit_after">optional</a>)</h4>
+    <p>The Revisit Tag defines after how many days or months the search engine spider should revisit your website.<br />
+    <br />
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody>
+            <tr>
+                <td width="25"><input type="checkbox" value="ja" checked="checked" name="revisiton" /></td>
+                <td width="75">Activate</td>
+                <td><input type="text" style="width: 50px;" class="textInput" value="3" name="revisittimes" />     <select class="textInput" name="retype" size="1">
+                <option selected="selected" value="month">month</option>
+                <option value="days">days</option>
+                </select></td>
+                <td width="5">&nbsp;</td>
+                <td width="75"><input type="button" style="width: 100%;" onclick="explain_section('revisit');" value="Help" /></td>
+            </tr>
+        </tbody>
+    </table>
+    </p>
+    <h4>Abstraction</h4>
+    <p>Fill out the 3 most important and relevant keywords of the page you add meta tags to. Separate the 3 words with a comma and a space.<br />
+    <br />
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody>
+            <tr>
+                <td width="25"><input type="checkbox" value="ja" checked="checked" name="commenton" /></td>
+                <td width="75">Activate</td>
+                <td><input type="text" style="width: 100%;" class="textInput" value="" size="60" maxlength="200" name="commenttext" /></td>
+                <td width="5">&nbsp;</td>
+                <td width="75"><input type="button" style="width: 100%;" onclick="explain_section('comment');" value="Help" /></td>
+            </tr>
+        </tbody>
+    </table>
+    </p> 
+
+  </div>
+</form>
+
+<!--
+<form action="" onsubmit="return mt_wizard_validate(this)" name="mt_wizard">
+    <h4>Title (the <a title="The html tag title tag" href="http://www.metatags.org/html_tag_title_tag">title</a> tag)</h4>
+    <p>The title of your web-page. Think of a captivating title for your website. This is the first line that will be displayed in a search result. Don't make the title longer than 100 characters.<br />
+    <br />
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody>
+            <tr>
+                <td><input type="text" style="width: 100%;" class="textInput" value="" size="60" maxlength="200" name="titletext" /></td>
+                <td width="5">&nbsp;</td>
+                <td width="75"><input type="button" style="width: 100%;" onclick="explain_section('title');" value="Help" /></td>
+            </tr>
+        </tbody>
+    </table>
+    </p>
+    <h4>Description (the meta <a href="http://www.metatags.org/meta_name_description" title="The meta name description">description</a> tag)</h4>
+    <p>A short description in 200 characters of your web-page. This appears 1-on-1 in the search results. Add a different description for every page of your website.<br />
+    <br />
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody>
+            <tr>
+                <td><input type="text" style="width: 100%;" class="textInput" value="" size="60" maxlength="200" name="description" /></td>
+                <td width="5">&nbsp;</td>
+                <td width="75"><input type="button" style="width: 100%;" onclick="explain_section('description');" value="Help" /></td>
+            </tr>
+        </tbody>
+    </table>
+    </p>
+    <h4>Keywords (the meta <a href="http://www.metatags.org/meta_name_keywords">keyword</a> tag)</h4>
+    <p>Describe your page in 20 different keywords. These keywords will be used to categorize your page. Separate with a comma-space (use no more than 1000 characters)<br />
+    <br />
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody>
+            <tr valign="top">
+                <td><textarea style="width: 100%;" class="textInput" rows="4" cols="60" name="keywords"></textarea></td>
+                <td width="5">&nbsp;</td>
+                <td width="75"><input type="button" style="width: 100%;" onclick="explain_section('keywords');" value="Help" /></td>
+            </tr>
+        </tbody>
+    </table>
+    </p> 
+    <h4>ROBOT-tag (<a href="http://www.metatags.org/meta_name_robots">optional</a>)</h4>
+    <p>The Robots Tag tells to the search engine spider which pages you want him to index. Use the index-follow tag so that the search engine spider will go through every page of your website.<br />
+    <br />
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody>
+            <tr>
+                <td width="25"><input type="checkbox" value="ja" checked="checked" name="roboton" /></td>
+                <td width="75">Activate</td>
+                <td><select class="textInput" name="rotext" size="1">
+                <option selected="selected" value="index, follow">index, follow</option>
+                <option value="noindex, follow">noindex, follow</option>
+                <option value="index, nofollow">index, nofollow</option>
+                <option value="noindex, nofollow">noindex, nofollow</option>
+                </select></td>
+                <td width="5">&nbsp;</td>
+                <td width="75"><input type="button" style="width: 100%;" onclick="explain_section('robot');" value="Help" /></td>
+            </tr>
+        </tbody>
+    </table>
+    </p>
+    <h4>REVISIT-tag&nbsp; (<a href="http://www.metatags.org/meta_name_revisit_after">optional</a>)</h4>
+    <p>The Revisit Tag defines after how many days or months the search engine spider should revisit your website.<br />
+    <br />
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody>
+            <tr>
+                <td width="25"><input type="checkbox" value="ja" checked="checked" name="revisiton" /></td>
+                <td width="75">Activate</td>
+                <td><input type="text" style="width: 50px;" class="textInput" value="3" name="revisittimes" />     <select class="textInput" name="retype" size="1">
+                <option selected="selected" value="month">month</option>
+                <option value="days">days</option>
+                </select></td>
+                <td width="5">&nbsp;</td>
+                <td width="75"><input type="button" style="width: 100%;" onclick="explain_section('revisit');" value="Help" /></td>
+            </tr>
+        </tbody>
+    </table>
+    </p>
+    <h4>Abstraction</h4>
+    <p>Fill out the 3 most important and relevant keywords of the page you add meta tags to. Separate the 3 words with a comma and a space.<br />
+    <br />
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody>
+            <tr>
+                <td width="25"><input type="checkbox" value="ja" checked="checked" name="commenton" /></td>
+                <td width="75">Activate</td>
+                <td><input type="text" style="width: 100%;" class="textInput" value="" size="60" maxlength="200" name="commenttext" /></td>
+                <td width="5">&nbsp;</td>
+                <td width="75"><input type="button" style="width: 100%;" onclick="explain_section('comment');" value="Help" /></td>
+            </tr>
+        </tbody>
+    </table>
+    </p> 
+    <h4>Generate Meta tags</h4>
+    <p>Fill out all the items and click on the 'Generate Meta Tags' button.<br />
+    <br />
+    <input type="button" style="font-weight: bold;" onclick="MaakTags(this.form);" value=" Generate MetaTags! " />   <input type="button" onclick="ResetPage(this.form);" value=" Reset " /></p>
+    <h4>Here you are; Your Meta tags</h4>
+    <p>When you've completed filling out all the sections, click 'Generate Meta Tags'.</p>
+    <p>(<i>Copy this text out of the generator below from the Meta tags Wizard into the HEAD part of your web-page and use Ctrl-C and Ctrl-V to add it to the HTML of your page</i>)<br />
+    <br />
+    <textarea style="width: 100%;" class="textInput" rows="5" cols="60" name="metatags"></textarea></p>
+</form> -->
+  </div> <!--Row -->
+  </section>
+</div>  <!-- Containter Div -->
+
+  <script type="text/javascript" src="../js/metadata.js"></script>
+</body>
+
+</html>

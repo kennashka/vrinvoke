@@ -1,0 +1,18 @@
+.intLink {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0000ff;
+}
+
+#txt2 {
+    background: gray;
+}
+
+
+.txta{
+
+	 background-image: url("/img/lotus.png");
+	 background-repeat: no-repeat;
+  background-position: center; 
+
+}
